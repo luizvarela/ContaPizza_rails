@@ -1,0 +1,12 @@
+<h3>Home</h3>
+<% if signed_in? %>
+	<ul class="users">
+		<% @users.each do |user| %>
+			<li>
+				<%= link_to user.name, user %>
+			</li>
+		<% end %>	
+	</ul>
+<% else %>
+	<h1>Bem-vindo ao Conta Pizzas</h1>
+<% end %>
